@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f8fa; /* light neutral grey */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top bar */
+.top-bar {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 100;
+}
+
+.profile-icon {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #006d77; /* deep teal */
+    padding: 6px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-icon:hover {
+    background-color: #006d77;
+    border-color: #004f52;
+}
+
+.profile-icon svg {
+    fill: #006d77;
+    transition: fill 0.3s ease;
+}
+
+.profile-icon:hover svg {
+    fill: white;
+}
+
+/* Main content centered */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Ensures vertical centering */
+}
+
+.main-content h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1b1f23; /* near black */
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.button-row {
+    display: flex;
+    gap: 18px; /* space between buttons */
+}
+
+.button-link {
+    background-color: transparent;
+    border: 2px solid #006d77;
+    color: #006d77;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #006d77;
+    color: white;
+    border-color: #004f52;
+}
+
+/* Shared container style for forms and profile */
+.signup-container,
+.login-container,
+.profile-container,
+.generic-container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    width: 380px;
+    margin: auto;
+}
+
+/* Headings for all pages */
+.signup-container h2,
+.login-container h2,
+.profile-container h2,
+.generic-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1b1f23;
+    margin-bottom: 25px;
+}
+
+/* Profile-specific text */
+.profile-container p {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #fafafa;
+}
+
+input::placeholder {
+    font-size: 15px;
+    color: #888;
+}
+
+/* Form buttons (outlined style) */
+button,
+input[type="submit"] {
+    background-color: transparent;
+    border: 2px solid #006d77;
+    color: #006d77;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #006d77;
+    color: white;
+    border-color: #004f52;
+}
+
+/* Back button (consistent across pages) */
+.back-link {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: transparent;
+    border: 2px solid #006d77;
+    color: #006d77;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #006d77;
+    color: white;
+    border-color: #004f52;
+}
